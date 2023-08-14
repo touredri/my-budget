@@ -73,6 +73,7 @@ GEM
     bootsnap (1.16.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    cancancan (3.5.0)
     capybara (3.39.2)
       addressable
       matrix
@@ -200,6 +201,8 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.2.2)
       railties (>= 6.0.0)
+    tailwindcss-rails (2.0.30-x64-mingw-ucrt)
+      railties (>= 6.0.0)
     thor (1.2.2)
     timeout (0.4.0)
     turbo-rails (1.4.0)
@@ -234,6 +237,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  cancancan
   capybara
   debug
   devise (~> 4.9)
@@ -246,6 +250,7 @@ DEPENDENCIES
   selenium-webdriver
   sprockets-rails
   stimulus-rails
+  tailwindcss-rails (~> 2.0)
   turbo-rails
   tzinfo-data
   web-console

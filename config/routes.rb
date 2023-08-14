@@ -2,8 +2,14 @@ Rails.application.routes.draw do
   resources :expenses
   resources :groups
   devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  devise_scope :user do
+    get '/logout', to: 'devise/sessions#destroy', as: :logout
+  end
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  authenticated :user do
+    root 'groups#index', as: :authenticated_root
+  end
+  unauthenticated :user do
+    root 'users#splash', as: :unauthenticated_root
+  end
 end
