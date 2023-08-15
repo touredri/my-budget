@@ -1,14 +1,29 @@
-<p style="color: green"><%= notice %></p>
+<section class="bg-AppGrayLight h-full flex flex-col items-center">
+  <nav class="w-full flex justify-between items-center bg-AppBlue text-white h-10 px-3">
+    <i class="fa fa-bars link-hover" id= "hamburger"></i>
+    <h1 class='font-ProximaBold font-medium'>Categories</h1>
+    <i class="fa fa-search link-hover"></i>
+  </nav>
+  <div class="bg-AppBlue w-full flex justify-end items-center pb-1.5 pt-1.5 recent">
+    <div class="recent-child flex justify-between items-center px-6">
+      <p class="text-white font-ProximaLight">Most Recent</p>
+      <p class="text-AppGrayDark font-normal">Most ancien</p>
+    </div>
+  </div>
+  <div class="w-full bg-white border-transparent flex justify-between items-center gift mb-5 h-12 ">
+    <p class="text-AppGrayLight font-ProximaLight text-lg">Gift Card</p>
+    <p class="font-bold text-black gift-price  text-lg">$45.00</p>
+  </div>
+  <br/>
+  <div id="groups" class="w-full flex flex-col items-center px-6">
+    <% @groups.each do |group| %>
+      <%= link_to group do %>
+        <%= render group %>
+       <% end %>
+    <% end %>
+  </div>
 
-<h1>Groups</h1>
-
-<div id="groups">
-  <% @groups.each do |group| %>
-    <%= render group %>
-    <p>
-      <%= link_to "Show this group", group %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New group", new_group_path %>
+  <div class="foot w-full absolute bottom-0 bg-AppGreen flex justify-center items-center px-2">
+    <%= link_to "Add new category", new_group_path %>
+  </div>
+</section>

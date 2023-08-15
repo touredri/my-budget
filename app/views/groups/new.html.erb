@@ -1,9 +1,11 @@
-<h1>New group</h1>
-
-<%= render "form", group: @group %>
-
+<section class="bg-AppGrayLight h-full flex flex-col items-center">
+  <nav class="w-full flex justify-between items-center bg-AppBlue text-white h-10 px-3">
+    <%= link_to groups_path do %>
+      <i class="fa fa-arrow-left link-hover"></i>
+    <% end %>
+    <h1 class='font-ProximaBold font-medium'>New Category</h1>
+    <i class="fa fa-searc link-hover"></i>
+  </nav><br/>
+  <%= render "form", group: @group %>
 <br>
-
-<div>
-  <%= link_to "Back to groups", groups_path %>
-</div>
+</section>

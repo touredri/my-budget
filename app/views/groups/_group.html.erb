@@ -1,12 +1,17 @@
-<div id="<%= dom_id group %>">
-  <p>
-    <strong>Name:</strong>
-    <%= group.name %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= group.user_id %>
-  </p>
-
+<div id="<%= dom_id group %>" class="group bg-white mb-3 rounded-md px-3 py-3 flex justify-between items-center">
+  <div class="flex justify-between items-center">
+    <% if group.icon.attached? %>
+      <div class="object-cover h-20 w-16">
+        <img src="<%= url_for(group.icon) %>" alt="img" class="w-full h-full">
+      </div>
+    <% end %>
+    <div class="flex flex-col h-full space-y-5">
+      <p class="text-AppGrayLight font-medium"><%= group.name %></p>
+      <p class="text-xs"><%= group.created_at.strftime('%d %B %Y') %></p>
+    </div>
+  </div>
+  <div class="flex flex-col h-full space-y-5">
+    <p class="text-black font-bold">$<%= group.total_expense %></p>
+    <div class="rounded-md bg-red-300 h-5 px-2 text-xl text-white hover:text-red-600" <%= link_to "Delete", group_path(group.id),  method: :delete %>
+  </div>
 </div>
