@@ -1,17 +1,17 @@
-<div id="<%= dom_id group %>" class="group bg-white mb-3 rounded-md px-3 py-3 flex justify-between items-center">
-  <div class="flex justify-between items-center">
+<div id="<%= dom_id group %>" class="group bg-AppWhite mb-4 rounded px-3 py-3 flex justify-between items-center">
+  <div class="flex space-x-5 description items-center">
     <% if group.icon.attached? %>
-      <div class="object-cover h-20 w-16">
-        <img src="<%= url_for(group.icon) %>" alt="img" class="w-full h-full">
+      <div class="h-20 w-12">
+        <img src="<%= url_for(group.icon) %>" alt="img" class="cat-img object-cover h-full rounded-md">
       </div>
     <% end %>
     <div class="flex flex-col h-full space-y-5">
-      <p class="text-AppGrayLight font-medium"><%= group.name %></p>
-      <p class="text-xs"><%= group.created_at.strftime('%d %B %Y') %></p>
+      <p class="text-AppGrayDark font-bold"><%= group.name %></p>
+      <p class="text-xs text-AppGray font-normal"><%= group.created_at.strftime('%d %B %Y') %></p>
     </div>
   </div>
   <div class="flex flex-col h-full space-y-5">
-    <p class="text-black font-bold">$<%= group.total_expense %></p>
-    <div class="rounded-md bg-red-300 h-5 px-2 text-xl text-white hover:text-red-600" <%= link_to "Delete", group_path(group.id),  method: :delete %>
+    <p class="text-AppGrayDark font-bold text-2xl">$<%= group.total_expense %></p>
+    <div class="remove"><%= button_to "Delete", group_path(group.id),  method: :delete, data: { turbo_confirm: "Are you sure?" } %></div>
   </div>
 </div>

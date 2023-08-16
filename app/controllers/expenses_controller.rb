@@ -13,6 +13,7 @@ class ExpensesController < ApplicationController
   # GET /expenses/new
   def new
     @expense = Expense.new
+    @group = Group.find(params[:group_id]) if params[:group_id].present?
   end
 
   # GET /expenses/1/edit
@@ -22,10 +23,12 @@ class ExpensesController < ApplicationController
   # POST /expenses or /expenses.json
   def create
     @expense = Expense.new(expense_params)
-
+    @expense.author = current_user
+    @group = Group.find(params[:expense][:group_id])
+    @group.expenses << @expense
     respond_to do |format|
       if @expense.save
-        format.html { redirect_to expense_url(@expense), notice: "Expense was successfully created." }
+        format.html { redirect_to @group, notice: "Expense was successfully created." }
         format.json { render :show, status: :created, location: @expense }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -50,9 +53,10 @@ class ExpensesController < ApplicationController
   # DELETE /expenses/1 or /expenses/1.json
   def destroy
     @expense.destroy
+    @group = Group.find(params[:group_id])
 
     respond_to do |format|
-      format.html { redirect_to expenses_url, notice: "Expense was successfully destroyed." }
+      format.html { redirect_to @group, notice: "Expense was successfully destroyed." }
       format.json { head :no_content }
     end
   end
@@ -65,6 +69,6 @@ class ExpensesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def expense_params
-      params.require(:expense).permit(:name, :amount, :author_id)
+      params.require(:expense).permit(:name, :amount)
     end
 end

@@ -10,12 +10,12 @@
       <p class="text-AppGrayDark font-normal">Most ancien</p>
     </div>
   </div>
-  <div class="w-full bg-white border-transparent flex justify-between items-center gift mb-5 h-12 ">
+  <div class="w-full bg-AppWhite border-transparent flex justify-between items-center gift h-12 ">
     <p class="text-AppGrayLight font-ProximaLight text-lg">Gift Card</p>
     <p class="font-bold text-black gift-price  text-lg">$45.00</p>
   </div>
   <br/>
-  <div id="groups" class="w-full flex flex-col items-center px-6">
+  <div id="groups" class="groups w-full flex flex-col items-center px-2">
     <% @groups.each do |group| %>
       <%= link_to group do %>
         <%= render group %>
