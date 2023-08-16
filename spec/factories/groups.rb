@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'faker'
 
 FactoryBot.define do
@@ -9,7 +11,7 @@ FactoryBot.define do
       before(:create) do |group|
         icon_path = Rails.root.join('spec', 'resources', 'hamburger.png')
         group.icon.attach(io: File.open(icon_path), filename: 'hamburger.png', content_type: 'image/png')
-        end
       end
     end
+  end
 end

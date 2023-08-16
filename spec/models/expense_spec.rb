@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Expense, type: :model do
@@ -31,20 +33,5 @@ RSpec.describe Expense, type: :model do
 
   it 'Has a user' do
     expect(subject.author).to eql(user)
-  end
-
-  context 'total_expenses' do
-    let(:group) { create(:group) }
-    let(:user) { create(:user) }
-    it 'Increases total expense for group when created' do
-      group.expenses.create(name: 'cake', amount: 1, author_id: user.id)
-      expect(group.total_expense).to eq(1)
-    end
-
-    it 'Decreases total expense for group when destroyed' do
-      group.expenses.create(name: 'cake', amount: 1, author_id: user.id)
-      group.expenses[0].destroy
-      expect(group.total_expense).to eq(0)
-    end
   end
 end

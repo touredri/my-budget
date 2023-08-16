@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'faker'
 
 FactoryBot.define do
@@ -12,9 +14,7 @@ FactoryBot.define do
     end
 
     after(:create) do |expense, evaluator|
-      if evaluator.group
-        evaluator.group.expenses << expense
-      end
+      evaluator.group.expenses << expense if evaluator.group
     end
   end
 end
