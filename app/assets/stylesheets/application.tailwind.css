@@ -26,7 +26,7 @@ body {
 
 @font-face {
   font-family: 'Proxima Nova Bold';
-  src: url('../fonts/FontsFree-Net-FontsFree-Net-Proxima-Nova-Bold.ttf');
+  src: url('../fonts/FontsFree-Net-Proxima-Nova-Bold.otf');
 }
 
 @font-face {
@@ -169,23 +169,6 @@ section {
   overflow-y: scroll;
 }
 
-.cat-img {
-  width: 90px;
-  height: 90px;
-  border-radius: 5px;
-}
-
-.description {
-  gap: 8px
-}
-
-.remove {
-  background-color: #fd5a5a;
-  padding: 2px;
-  border-radius: 5px;
-  color: white;
-}
-
 .details {
   width: 97%;
   border-radius: 8px;
@@ -198,4 +181,8 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.nav-pop {
+  width: 50%;
 }

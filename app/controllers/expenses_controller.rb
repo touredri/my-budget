@@ -24,7 +24,7 @@ class ExpensesController < ApplicationController
   def create
     @expense = Expense.new(expense_params)
     @expense.author = current_user
-    @group = Group.find(params[:expense][:group_id])
+    @group = Group.find(params[:expense][:group_id]).includes([:icon_attachment])
     @group.expenses << @expense
     respond_to do |format|
       if @expense.save

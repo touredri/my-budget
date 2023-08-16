@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :expenses, foreign_key: 'author_id'
   has_many :groups
+
+  validates :name, presence: true, length: { minimum: 3, maximum: 20 }
 end

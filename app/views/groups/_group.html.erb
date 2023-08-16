@@ -1,8 +1,11 @@
-<div id="<%= dom_id group %>" class="group bg-AppWhite mb-4 rounded px-3 py-3 flex justify-between items-center">
-  <div class="flex space-x-5 description items-center">
+<div id="<%= dom_id group %>"
+     class="group group/item hover:bg-slate-100
+     bg-AppWhite mb-4 rounded px-3 py-3 flex
+     justify-between items-center">
+  <div class="flex space-x-5 items-center">
     <% if group.icon.attached? %>
-      <div class="h-20 w-12">
-        <img src="<%= url_for(group.icon) %>" alt="img" class="cat-img object-cover h-full rounded-md">
+      <div class="h-20 w-14">
+        <img src="<%= url_for(group.icon) %>" alt="img" class="object-cover h-full w-full rounded-md">
       </div>
     <% end %>
     <div class="flex flex-col h-full space-y-5">
@@ -11,7 +14,7 @@
     </div>
   </div>
   <div class="flex flex-col h-full space-y-5">
-    <p class="text-AppGrayDark font-bold text-2xl">$<%= group.total_expense %></p>
-    <div class="remove"><%= button_to "Delete", group_path(group.id),  method: :delete, data: { turbo_confirm: "Are you sure?" } %></div>
+    <p class="text-AppGrayDark font-bold text-xl">$<%= group.total_expense %></p>
+    <div class="bg-[#fd5a5a] text-white rounded-[5px] px-[2px] py-[2px] invisible group-hover/item:visible"><%= button_to "Delete", group_path(group.id),  method: :delete, data: { turbo_confirm: "Are you sure?" } %></div>
   </div>
 </div>

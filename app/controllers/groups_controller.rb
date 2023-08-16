@@ -4,11 +4,12 @@ class GroupsController < ApplicationController
   # GET /groups or /groups.json
   def index
     @groups = Group.all.order(created_at: :desc)
+                   .includes(icon_attachment: :blob)
   end
 
   # GET /groups/1 or /groups/1.json
   def show
-    @expenses = @group.expenses
+    @expenses = @group.expenses.order(created_at: :desc)
     @title = "Transactions"
   end
 
