@@ -16,7 +16,7 @@
     </div>
     <%= form.hidden_field :group_id, value: @group.id %>
     <div class="submit w-full flex justify-center items-center py-3 px-6 font-ProximaBold">
-      <%= form.submit %>
+      <%= form.submit 'Save Expense' %>
     </div>
     <% if @expense.errors.any? %>
       <div style="color: red">
