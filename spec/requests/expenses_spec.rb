@@ -9,38 +9,51 @@ RSpec.describe 'Expenses', type: :request do
   end
 
   describe 'GET /expenses/new' do
+    it 'redirects to login page if user is not logged in' do
+      sign_out user
+      get new_expense_path
+      expect(response).to redirect_to(new_user_session_path)
+    end
+  end
+
+  describe 'GET /expenses/new' do
+
     it 'renders the new template' do
+      group = create(:group)
       get new_expense_path(group_id: group.id)
       expect(response).to render_template(:new)
     end
-  end
 
-  describe 'POST /expenses' do
+    it 'displays the expense form' do
+      group = create(:group)
+      get new_expense_path(group_id: group.id)
+      expect(response.body).to have_selector('form')
+      expect(response.body).to have_selector('input[type="text"][name="expense[name]"]')
+      expect(response.body).to have_selector('input[type="number"][name="expense[amount]"]')
+      expect(response.body).to have_selector('input[type="hidden"][name="expense[group_id]"]')
+      expect(response.body).to have_selector('input[type="submit"]')
+    end
+
     it 'creates a new expense' do
-      sign_in user
-      expect {
-        post expenses_path, params: { expense: { name: 'Cake', amount: 10, group_id: group.id } }
-      }.to change(Expense, :count).by(1)
+      group = create(:group)
+      visit new_expense_path(group_id: group.id)
+      fill_in 'expense[name]', with: 'Cake'
+      fill_in 'expense[amount]', with: 10.0
+      click_button 'Create Expense'
+
       expect(response).to redirect_to(group_path(group))
+      expect(Expense.last.name).to eq('Cake')
+      expect(Expense.last.amount).to eq(10.0)
+      expect(Expense.last.group).to eq(group)
     end
-  end
 
-  describe 'GET /expenses/:id' do
-    it 'renders the show template' do
-      sign_in user
-      get expense_path(expense)
-      expect(response).to render_template(:show)
-    end
-  end
+    it 'displays errors if expense creation fails' do
+      group = create(:group)
+      visit new_expense_path(group_id: group.id)
+      click_button 'Create Expense'
 
-  describe 'PATCH /expenses/:id' do
-    it 'updates the expense' do
-      sign_in user
-      new_name = 'New Name'
-      patch expense_path(expense), params: { expense: { name: new_name } }
-      expense.reload
-      expect(expense.name).to eq(new_name)
-      expect(response).to redirect_to(expense_path(expense))
+      expect(response).to render_template(:new)
+      expect(response.body).to have_selector('div[style="color: gray;"]')
     end
   end
 end

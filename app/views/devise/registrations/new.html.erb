@@ -9,11 +9,11 @@
         <%= f.submit "Next" %>
       </div>
     </nav><br/>
-    <div class="w-full input-container px-6 mt-2 flex flex-col justify-between items-center">
-        <div class="field placeholder:text-slate-400 w-full border-gray-100 mb-5 rounded">
+    <div class="w-1/2 input-container px-6 mt-2 flex flex-col justify-between items-center">
+        <div class="field placeholder:text-slate-400 border-gray-100 mb-3 rounded">
           <%= f.text_field :name, autofocus: true, placeholder:"Name" %>
         </div>
-        <div class="field">
+        <div class="field mb-3">
           <%= f.email_field :email, autofocus: true, placeholder:"Emails", autocomplete: "email", class:"peer placeholder:text-slate-400 w-full border-gray-100 invalid:border-pink-600 mb-5 rounded" %>
         </div>
         <div class="field">

@@ -94,7 +94,7 @@ a {
 }
 
 .field {
-  width: 70%;
+  width: 100%;
 }
 
 .field input {
@@ -166,15 +166,14 @@ section {
 
 .groups {
   max-height: 500px;
-  overflow-y: scroll;
 }
 
 .details {
   width: 97%;
   border-radius: 8px;
   padding: 0 10px;
-  height: 540px;
-  overflow-y: scroll;
+  max-height: 540px;
+
 }
 
 form {
