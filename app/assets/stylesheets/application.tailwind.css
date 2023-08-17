@@ -11,7 +11,7 @@
 
   body {
     height: 100%;
-    border: 1px solid #989797;
+    border: 1px solid rgba(152, 151, 151, 0.24);
   }
 
   body,

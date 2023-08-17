@@ -1,7 +1,7 @@
 <section class="bg-AppGrayLight h-full flex flex-col items-center">
   <nav class="w-full flex justify-between items-center
   bg-AppBlue text-white h-10 px-3">
-    <i class="fa fa-bars link-hover peer nav-toggle" id= "hamburger"></i>
+    <i class="fa fa-bars link-hover peer nav-toggle hamburger" id= "hamburger"></i>
     <div class="hidden bg-AppWhite text-xl absolute top-0 left-0
     right-0 h-[45px] justify-between
     items-center px-[10px] py-[7px] peer-[.nav-toggle] nav-pop">
@@ -17,11 +17,10 @@
     <h1 class='font-ProximaBold font-medium'>Categories</h1>
     <i class="fa fa-search link-hover"></i>
   </nav>
-  <div class="bg-AppBlue w-full flex justify-end items-center pb-1.5 pt-1.5 recent">
-    <div class="recent-child flex justify-between items-center px-6">
-      <p class="text-white font-ProximaLight">Most Recent</p>
-      <p class="text-AppGrayDark font-normal">Most ancien</p>
-    </div>
+  <div class="bg-AppBlue w-full flex justify-between items-center px-1.5 py-1.5 ">
+    <p class="text-white"> <%= link_to 'Log out', logout_path %> </p>
+    <p class="text-white font-ProximaLight">Most Recent</p>
+    <p class="text-AppGrayDark font-normal">Most ancien</p>
   </div>
   <div class="w-full bg-AppWhite border-transparent flex justify-between items-center gift h-12 ">
     <p class="text-AppGrayLight font-ProximaLight text-lg">Gift Card</p>
