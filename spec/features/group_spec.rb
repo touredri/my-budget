@@ -2,7 +2,6 @@
 
 require 'rails_helper'
 
-
 RSpec.describe 'Group' do
   include Devise::Test::IntegrationHelpers
   let(:user) { create(:user) }
