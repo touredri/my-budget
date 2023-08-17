@@ -2,11 +2,11 @@
 
 # grab controller from app\controllers\groups_controller.rb
 class GroupsController < ApplicationController
-  before_action :set_group, only: %i[show edit update destroy]
+  load_and_authorize_resource
 
   # GET /groups or /groups.json
   def index
-    @groups = Group.all.order(created_at: :desc).includes(icon_attachment: :blob)
+    @groups = Group.accessible_by(current_ability).all.order(created_at: :desc).includes(icon_attachment: :blob)
   end
 
   # GET /groups/1 or /groups/1.json
