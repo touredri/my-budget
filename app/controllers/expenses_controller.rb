@@ -2,7 +2,7 @@
 
 # Path: app\controllers\expenses_controller.rb
 class ExpensesController < ApplicationController
-  before_action :set_expense, only: %i[show edit update destroy]
+  load_and_authorize_resource
 
   # GET /expenses or /expenses.json
   def index
