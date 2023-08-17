@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Groups', type: :request do
@@ -28,5 +30,4 @@ RSpec.describe 'Groups', type: :request do
       expect(response).to be_successful
     end
   end
-
 end

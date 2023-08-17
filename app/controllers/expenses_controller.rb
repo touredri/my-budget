@@ -23,16 +23,12 @@ class ExpensesController < ApplicationController
 
   # POST /expenses or /expenses.json
   def create
-    @expense = Expense.new(expense_params)
-    @expense.author = current_user
     @group = Group.find(params[:expense][:group_id])
-    @group.expenses << @expense
-    respond_to do |format|
-      if @expense.save
-        format.html { redirect_to @group, notice: 'Expense was successfully created.' }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-      end
+    @expense = @group.expenses.build(expense_params.merge(author: current_user))
+    if @expense.save
+      redirect_to @group, notice: 'Expense was successfully created.'
+    else
+      render :new, status: :unprocessable_entity
     end
   end
 

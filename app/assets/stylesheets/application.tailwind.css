@@ -60,7 +60,7 @@ a {
 }
 
 .bg-AppGrayLight {
-  background-color: #e7e4e4;
+  background-color: #efefef;
 }
 
 .text-AppGrayDark {
@@ -114,10 +114,6 @@ a {
 
 .groups a {
   width: 90%;
-}
-
-.new-cat {
-  color: black;
 }
 
 section {

@@ -2,7 +2,7 @@
 <!-- @format -->
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
-
+<img src="budget-demo.gif" alt="screenshot" height="500" width="300"/>
 # Budget App
 
 > "Budget app" is a mobile web application where you can manage your budget:
