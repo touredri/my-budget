@@ -75,18 +75,16 @@ a {
   color: #979da2;
 }
 
-@layer components {
-  .button-hover {
-    @apply hover:bg-violet-600 active:bg-violet-700 cursor-pointer;
-  }
+.button-hover {
+  @apply hover:bg-violet-600 active:bg-violet-700 cursor-pointer;
+}
 
-  .link-hover {
-    @apply active:text-violet-700 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300;
-  }
+.link-hover {
+  @apply active:text-violet-700 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300;
+}
 
-  .header-mob {
-    @apply py-2 px-4 w-full bg-DesignBlue flex text-white items-center justify-between;
-  }
+.header-mob {
+  @apply py-2 px-4 w-full bg-DesignBlue flex text-white items-center justify-between;
 }
 
 .recent-child {
@@ -169,7 +167,6 @@ section {
   border-radius: 8px;
   padding: 0 10px;
   max-height: 540px;
-
 }
 
 form {
