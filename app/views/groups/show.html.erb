@@ -1,0 +1,36 @@
+<section class="bg-AppGrayLight h-full flex flex-col items-center">
+  <nav class="w-full flex justify-between items-center bg-AppBlue text-white h-10 px-3">
+    <%= link_to groups_path do %>
+      <i class="fa fa-arrow-left link-hover"></i>
+    <% end %>
+    <h1 class='font-ProximaBold font-medium'>Transactions</h1>
+    <i class="fa fa-searc link-hover"></i>
+  </nav>
+  <div class="bg-AppWhite flex flex-col mt-2 rounded-md details">
+    <%= render @group %>
+    <hr style="height: 2px; width: 90%; ">
+    <div id="expenses">
+      <% if @expenses.any? %>
+        <% @expenses.each do |expense| %>
+          <div class="flex flex-col space-y-5 mt-4 px-[3px] py-[3] group/item hover:bg-slate-100 ">
+            <div class="flex justify-between items-center text-AppGrayDark font-medium">
+              <p><%= expense.name %></p>
+              <p>$<%= expense.amount %></p>
+            </div>
+            <div class="flex justify-between items-center">
+              <p class="text-AppGrayLight font-medium text-sm"><%= expense.created_at %></p>
+              <div class="bg-[#fd5a5a] text-white rounded-[5px]
+              px-[2px] py-[2px] invisible group-hover/item:visible">
+                <%= button_to "remove", expense, method: :delete, params: { group_id: @group.id } %>
+              </div>
+            </div>
+          </div>
+          <hr style="margin: 7px 0">
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="foot w-full absolute bottom-0 bg-AppGreen flex justify-center items-center px-2">
+    <%= link_to "New expense", new_expense_path(group_id: @group.id) %>
+  </div>
+</section>

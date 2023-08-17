@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (min-width: 767px) {
+  html {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+
+  body {
+    height: 100%;
+    border: 1px solid rgba(152, 151, 151, 0.24);
+  }
+
+  body,
+  .foot {
+    width: 50%;
+  }
+}
+
+body {
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url('../fonts/FontsFree-Net-Proxima-Nova-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova Light';
+  src: url('../fonts/FontsFree-Net-FontsFree-Net-Proxima-Nova-2.ttf');
+}
+
+button,
+a {
+  transition: background-color 0.25s ease-in, color 0.25s ease-in;
+}
+
+.font-ProximaBold {
+  font-family: 'Proxima Nova Bold', sans-serif;
+}
+
+.font-ProximaLight {
+  font-family: 'Proxima Nova Light', sans-serif;
+}
+
+.bg-AppBlue {
+  background-color: #3778c2;
+}
+
+.bg-AppGreen {
+  background-color: #60b523;
+}
+
+.bg-AppWhite {
+  background-color: #fff;
+}
+
+.bg-AppGrayLight {
+  background-color: #efefef;
+}
+
+.text-AppGrayDark {
+  color: #434b54;
+}
+
+.text-AppGray {
+  color: #878a8f;
+}
+
+.text-AppGrayLight {
+  color: #979da2;
+}
+
+.button-hover {
+  @apply hover:bg-violet-600 active:bg-violet-700 cursor-pointer;
+}
+
+.link-hover {
+  @apply active:text-violet-700 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300;
+}
+
+.recent-child {
+  width: 65%;
+}
+
+.field {
+  width: 100%;
+}
+
+.field input {
+  border-radius: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.gift {
+  padding: 0 12px;
+}
+
+.group {
+  width: 100%;
+  padding: 8px;
+}
+
+.groups a {
+  width: 90%;
+}
+
+section {
+  height: 100%;
+}
+
+.bottom {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+}
+
+.foot {
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+}
+
+.gift-price {
+  font-weight: bold;
+  color: black;
+}
+
+.foot a {
+  color: white;
+  border: 1px solid white;
+  padding: 4px 53px;
+  cursor: pointer;
+}
+
+.form-img {
+  width: 40px;
+  height: 50px;
+}
+
+.submit {
+  border: 1px solid #9a9999;
+  background-color: #31e739;
+  height: 40px;
+  width: 50%;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.groups {
+  max-height: 500px;
+}
+
+.details {
+  width: 97%;
+  border-radius: 8px;
+  padding: 0 10px;
+  max-height: 540px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-pop {
+  width: 50%;
+}

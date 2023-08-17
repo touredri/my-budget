@@ -1,0 +1,42 @@
+<section class="bg-AppGrayLight h-full flex flex-col items-center">
+  <nav class="w-full flex justify-between items-center field
+  bg-AppBlue text-white h-10 px-3">
+    <i class="fa fa-bars link-hover peer nav-toggle hamburger" id= "hamburger"></i>
+    <div class="hidden bg-AppWhite text-xl absolute top-0 left-0
+    right-0 h-[45px] justify-between
+    items-center px-[10px] py-[7px] peer-[.nav-toggle] nav-pop">
+      <h1 class="text-AppGrayDark font-bold"><%= current_user.name %></h1>
+      <%= link_to "logout", logout_path %>
+      <svg xmlns="http://www.w3.org/2000/svg" class="close" height="2em" viewBox="0 0 384 512">
+        <style>svg{fill:#f00a2c}</style><path d="M342.6 150.6c12.5-12.5 12.5-32.8
+      0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3
+      0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8
+      12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8
+      0-45.3L237.3 256 342.6 150.6z"/></svg>
+    </div>
+    <h1 class='font-ProximaBold font-medium'>Categories</h1>
+    <i class="fa fa-search link-hover"></i>
+  </nav>
+  <div class="bg-AppBlue w-full flex justify-between items-center px-1.5 py-1.5 ">
+    <p class="text-white"> <%= link_to 'Log out', logout_path %> </p>
+    <p class="text-white font-ProximaLight">Most Recent</p>
+    <p class="text-AppGrayDark font-normal">Most ancien</p>
+  </div>
+  <div class="w-full bg-AppWhite border-transparent flex justify-between items-center gift h-12 ">
+    <p class="text-AppGrayLight font-ProximaLight text-lg">Gift Card</p>
+    <p class="font-bold text-black gift-price  text-lg">$45.00</p>
+  </div>
+  <br/>
+
+  <div id="groups" class="groups w-full flex flex-col items-center px-2">
+    <% @groups.each do |group| %>
+      <%= link_to group do %>
+        <%= render group %>
+       <% end %>
+    <% end %>
+  </div>
+
+  <div class="foot w-full absolute bottom-0 bg-AppGreen flex justify-center items-center px-2">
+    <%= link_to "Add new category", new_group_path %>
+  </div>
+</section>
