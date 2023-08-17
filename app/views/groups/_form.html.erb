@@ -1,11 +1,11 @@
 <%= form_with(model: group) do |form| %>
 
-  <div class="flex flex-col p-3 bg-white w-1/2 text-black new-cat ">
+  <div class="flex flex-col p-3 bg-white w-3/4 text-black new-cat ">
     <%= form.label :icon %>
     <%= form.file_field :icon, accept:"image/png, image/gif, image/jpeg, image/svg, image/jpg" %>
   </div><br/>
 
-  <div class="field w-1/2" style="display: block">
+  <div class="field new-category" style="display: block">
     <%= form.text_field :name, placeholder:"Title" %>
   </div>
 

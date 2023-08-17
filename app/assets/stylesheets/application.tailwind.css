@@ -97,6 +97,10 @@ a {
   width: 100%;
 }
 
+.new-category {
+  width: 75%;
+}
+
 .gift {
   padding: 0 12px;
 }
