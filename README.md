@@ -23,7 +23,7 @@ https://budget-zbvh.onrender.com
 
 ## Video Demo
 
-https://www.loom.com/share/051cadb4535a467eae4ad9430dffbae4?sid=a82368e4-e12a-41fa-b93d-e2cf00099fa2
+https://www.loom.com/share/2236a2d63cb04817be2545b88a8af1b4?sid=b69afd6c-e3c6-46d3-ae3b-2249d1fe0503
 
 ### To run the project locally:
 
