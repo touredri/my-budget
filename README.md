@@ -108,7 +108,7 @@
 - In the project directory, you should download all dependencies using:
 
 ```bash
-> bundle install
+> cd my-project
 ```
 
 - then setup the db using the following command in the CL
@@ -126,8 +126,7 @@ Install this project with:
 Example command:
 
 ```sh
-  cd my-project
->  bundle install
+  > bundle install
 ```
 
 ### Usage
