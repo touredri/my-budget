@@ -1,33 +1,93 @@
 
-<!-- @format -->
+<div align="center">
+  <h3><b>Budget App</b></h3>
+</div>
 
-![](https://img.shields.io/badge/Microverse-blueviolet)
-<img src="budget-demo.gif" alt="screenshot" height="500" width="300"/>
-# Budget App
+<!-- TABLE OF CONTENTS -->
 
-> "Budget app" is a mobile web application where you can manage your budget:
+# 📗 Table of Contents
+
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
+
+<!-- PROJECT DESCRIPTION -->
+
+# 📖 [Budget App] <a name="about-project"></a>
+
+**[Budget app]** is a mobile web application where you can manage your budget:
 > transactions list associated with a category,
 > in all manage money you spend.
 
-## Built With
+## 🛠 Built With <a name="built-with"></a>
 
-- Ruby
-- Rails
-- Postgres
+### Tech Stack <a name="tech-stack"></a>
 
-## Getting Started
+<details>
+  <summary>Ruby</summary>
+  <ul>
+    <li><a href="https://ruby.org/">Ruby</a></li>
+  </ul>
+</details>
 
-## Live Demo
+<details>
+  <summary>Rails</summary>
+  <ul>
+    <li><a href="https://rubyonrails.com/">Ruby on Rail</a></li>
+  </ul>
+</details>
 
-https://budget-zbvh.onrender.com
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
 
-## Video Demo
+<!-- Features -->
 
-https://www.loom.com/share/2236a2d63cb04817be2545b88a8af1b4?sid=b69afd6c-e3c6-46d3-ae3b-2249d1fe0503
+### Key Features <a name="key-features"></a>
 
-### To run the project locally:
+- **[login]**
+- **[category page]**
+- **[add expense to category]**
 
-#### Step 1:
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://budget-zbvh.onrender.com)
+
+## 🚀 Live Video Demo <a name="live-demo"></a>
+
+- [Live video Demo](https://www.loom.com/share/2236a2d63cb04817be2545b88a8af1b4?sid=b69afd6c-e3c6-46d3-ae3b-2249d1fe0503)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+> To get a local copy up and running, follow these steps.
+
+### Prerequisites
 
 - Clone this repo locally using git in the command line and the following command
 
@@ -43,7 +103,7 @@ https://www.loom.com/share/2236a2d63cb04817be2545b88a8af1b4?sid=b69afd6c-e3c6-46
 
 - Alternatively, you can just download the complete zip file and extract the folder in your directory
 
-#### Step 2:
+### Setup
 
 - In the project directory, you should download all dependencies using:
 
@@ -57,39 +117,95 @@ https://www.loom.com/share/2236a2d63cb04817be2545b88a8af1b4?sid=b69afd6c-e3c6-46
 > bin/rails db:setup or rails db:setup
 ```
 
-- Finally, you can use this command to start the live server and checkout the app!
 
-```bash
-> bin/rails s or rails s
+### Install
+
+Install this project with:
+
+
+Example command:
+
+```sh
+  cd my-project
+>  bundle install
 ```
 
-## Testing:
+### Usage
 
-To perform tests, run the following command
+To run the project, execute the following command:
 
-```bash
-> bundle exec rspec spec
+Example command:
+
+```sh
+>  rails server
 ```
 
-## Authors
+### Run tests
 
-👤 **Drissa Toure**
+To run tests, run the following command:
 
-- GitHub: [@Drissa](https://github.com/touredri)
-- LinkedIn: [Drissa Toure](https://www.linkedin.com/in/touredri/)
+Example command:
 
-## 🤝 Contributing
+```sh
+>  bundle exec rspec spec
+```
 
-Contributions, issues, and feature requests are welcome and highly encouraged!
-We feel that your input is what helps us grow so you're always Welcome :)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Author1**
+
+- GitHub: [touredri](https://github.com/touredri)
+- Twitter: [touredri](https://twitter.com/touredri)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/touredri)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **[nav bar increase]**
+- [ ] **[pop up setup for click]**
+- [ ] **[increase UX]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-## Show your support
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Give a ⭐️ if you like this project!
-I would love to hear your thoughts and ideas 🖤
+<!-- SUPPORT -->
 
-## 📝 License
+## ⭐️ Show your support <a name="support"></a>
 
-This project is [MIT](./MIT.md) licensed.
+
+If you like this project give it a start and follow me to other interesting project
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+
+I would like to thank Gregoire Vella on Behance for the design
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
