@@ -8,10 +8,10 @@
 
 <div class="flex flex-col pl-3">
   <%= form_with(model: @expense) do |form| %>
-    <div class="field w-full">
+    <div class="field new-category">
       <%= form.text_field :name, placeholder: "Name" %>
     </div>
-    <div class="field w-full">
+    <div class="field new-category">
       <%= form.number_field :amount,placeholder: "Amount"  %>
     </div>
     <%= form.hidden_field :group_id, value: @group.id %>
