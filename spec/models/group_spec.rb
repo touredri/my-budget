@@ -15,7 +15,7 @@ RSpec.describe Group, type: :model do
 
   it 'can calculate total expenses' do
     user = create(:user)
-    group = create(:group)
+    group = create(:group, user:)
     ex1 = create(:expense, amount: 50, author: user)
     ex2 = create(:expense, amount: 100, author: user)
     group.expenses << ex1

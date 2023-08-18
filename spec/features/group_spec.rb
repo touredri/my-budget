@@ -4,13 +4,21 @@ require 'rails_helper'
 
 RSpec.describe 'Group' do
   include Devise::Test::IntegrationHelpers
+
   let(:user) { create(:user) }
   let(:group) { create(:group) }
   before(:example) do
     sign_in user
+    allow(Ability).to receive(:new).and_return(ability)
   end
 
   describe 'GET /groups/new' do
+    # let(:ability) { Ability.new(user) }
+    let(:ability) do
+      ability = Ability.new(user)
+      ability.can :manage, :all # Allow the user to manage all resources
+      ability
+    end
     it 'renders the new template' do
       visit new_group_path
       expect(page).to have_selector('form')
