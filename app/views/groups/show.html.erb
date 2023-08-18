@@ -3,7 +3,7 @@
     <%= link_to groups_path do %>
       <i class="fa fa-arrow-left link-hover"></i>
     <% end %>
-    <h1 class='font-ProximaBold font-medium'>Transactions</h1>
+    <h1 class='font-ProximaBold font-medium'>Mes Dépenses</h1>
     <i class="fa fa-searc link-hover"></i>
   </nav>
   <div class="bg-AppWhite flex flex-col mt-2 rounded-md details">
@@ -21,7 +21,7 @@
               <p class="text-AppGrayLight font-medium text-sm"><%= expense.created_at %></p>
               <div class="bg-[#fd5a5a] text-white rounded-[5px]
               px-[2px] py-[2px] invisible group-hover/item:visible">
-                <%= button_to "remove", expense, method: :delete, params: { group_id: @group.id } %>
+                <%= button_to "enlever", expense, method: :delete, params: { group_id: @group.id } %>
               </div>
             </div>
           </div>
@@ -31,6 +31,6 @@
     </div>
   </div>
   <div class="foot w-full absolute bottom-0 bg-AppGreen flex justify-center items-center px-2">
-    <%= link_to "New expense", new_expense_path(group_id: @group.id) %>
+    <%= link_to "AjouteR dépense", new_expense_path(group_id: @group.id) %>
   </div>
 </section>

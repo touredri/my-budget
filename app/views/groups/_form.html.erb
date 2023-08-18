@@ -6,7 +6,7 @@
   </div><br/>
 
   <div class="field new-category" style="display: block">
-    <%= form.text_field :name, placeholder:"Title" %>
+    <%= form.text_field :name, placeholder:"Titre" %>
   </div>
 
   <br/>
@@ -15,7 +15,7 @@
   </div>
   <% if group.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
+      <h2><%= pluralize(group.errors.count, "error") %> Non enregistrable:</h2>
       <ul>
         <% group.errors.each do |error| %>
           <li><%= error.full_message %></li>

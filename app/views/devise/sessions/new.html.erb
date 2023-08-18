@@ -3,7 +3,7 @@
     <%= link_to unauthenticated_root_path do %>
       <i class="fa fa-arrow-left link-hover"></i>
     <% end %>
-    <h1 class='font-ProximaBold font-medium'>Login</h1>
+    <h1 class='font-ProximaBold font-medium'>Connection</h1>
     <i class="fa fa-searc link-hover"></i>
   </nav><br/>
 
@@ -21,10 +21,10 @@
     <div class="actions border-gray-100 bg-[#31e739]
      px-2 py-2 mt-1 mb-4 h-[40px] text-white rounded-md
       flex justify-center items-center w-full">
-      <%= f.submit "Log in" %>
+      <%= f.submit "Se connecté" %>
     </div>
   <% end %>
   <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'devise' %>
-    <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+    <%= link_to "Mot de passe oublier?", new_password_path(resource_name) %><br />
   <% end %>
 </section>

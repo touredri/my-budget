@@ -4,9 +4,9 @@
       <%= link_to :unauthenticated_root do %>
         <i class="fa fa-arrow-left link-hover"></i>
       <% end %>
-      <h1 class='font-ProximaLight font-medium'>Register</h1>
+      <h1 class='font-ProximaLight font-medium'>S'enregistrer</h1>
       <div class="actions font-ProximaLight link-hover">
-        <%= f.submit "Next" %>
+        <%= f.submit "Suivant" %>
       </div>
     </nav><br/>
     <div class="w-4/5 max-w-xs input-container px-2 mt-2 flex flex-col justify-between items-center">
@@ -15,7 +15,7 @@
         </div>
         <div class="field mb-3">
           <%= f.email_field :email, autofocus: true, placeholder:"Emails", autocomplete: "email", class:"peer placeholder:text-slate-400 w-full border-gray-100 invalid:border-pink-600 mb-5 rounded" %>
-          <p class="invisible peer-invalid:visible text-red-600 text-xs italic">Please enter a valid email.</p>
+          <p class="invisible peer-invalid:visible text-red-600 text-xs italic">Entrez un email valid</p>
         </div>
         <div class="field">
           <%= f.password_field :password, placeholder:"Password", class:"placeholder:text-slate-400 w-full border-gray-100 rounded" %>

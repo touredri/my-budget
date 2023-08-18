@@ -15,6 +15,6 @@
   </div>
   <div class="flex flex-col h-full space-y-5">
     <p class="text-AppGrayDark font-bold text-xl">$<%= group.total_expense %></p>
-    <div class="bg-[#fd5a5a] text-white rounded-[5px] px-[2px] py-[2px] invisible group-hover/item:visible"><%= button_to "Delete", group_path(group.id),  method: :delete, data: { turbo_confirm: "Are you sure?" } %></div>
+    <div class="bg-[#fd5a5a] text-white rounded-[5px] px-[2px] py-[2px] invisible group-hover/item:visible"><%= button_to "suprimer", group_path(group.id),  method: :delete, data: { turbo_confirm: "Are you sure?" } %></div>
   </div>
 </div>
